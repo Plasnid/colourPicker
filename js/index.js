@@ -1,7 +1,7 @@
 //we make an array from the querySelectorAll nodeList for input
 let sliders = Array.from(document.querySelectorAll("input"));
 
-//here is a little shortcut for targetting the body
+//here is a little shortcut for targetting the bodies collection of computer styles aka. css3 variables
 let colourSource = getComputedStyle(document.body);
 /*
      a fat arrow function contains our action for our listener.
@@ -32,7 +32,7 @@ sliders.forEach(slider => {
   /**  TRY IT OUT!
     1.  add an event listener to eah slider that:
       a.  looks for change events
-      b.  calls updateColour
+      b.  calls updateColor
     2.  make a variable called fakeEvent which is a new Event for a 'change'
     3.  have the slider call the dispatchEvent function with the fakeEvent variable
   */
