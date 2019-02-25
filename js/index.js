@@ -8,10 +8,15 @@ let colourSource = getComputedStyle(document.body);
      When a change is detected on an element, the slider value is updated
 */
 let updateColor = (e) =>{
-  /***  TRY IT OUT
+  /*
+    Step 4: 
+    TRY IT OUT
     -data elements are part of the dataset of e.target
     -we want to get the color property from the dataset that we made earlier
     -lets use template literals to use the colour property
+      
+    What should we change someValue to?  What comes after data- in our html? 
+
     -it should look something like this!
       eg. document.body.style.setProperty(`--${e.target.dataset.someValue}`, e.target.value);  
   */
@@ -29,13 +34,19 @@ let updateColor = (e) =>{
 sliders.forEach(slider => {
   slider.value = parseInt(colourSource.getPropertyValue(`--${slider.dataset.color}`));
   
-  /**  TRY IT OUT!
+  /**  
+    Step 5:
+    TRY IT OUT!
+    our sliders array holds onto a reference for a our red, green and blue sliders
     1.  add an event listener to eah slider that:
       a.  looks for change events
       b.  calls updateColor
     2.  make a variable called fakeEvent which is a new Event for a 'change'
     3.  have the slider call the dispatchEvent function with the fakeEvent variable
   */
+  //slider.addEventListener("what listener goes here?", what function goes here?);
+  //let fakeEvent = new Event("what event goes here?");
+  //slider.dispatchEvent(what do we dispatch here?);
 
   
 });
